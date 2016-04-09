@@ -1,0 +1,11 @@
+<h1>Edit</h1>
+
+<form action="/inventory/<%= @i %>/update" method="POST">
+  <p>Name: <input type="text"></p>
+  <br />
+  <p>Price: <input type="text" name="price"></p>
+  <p>Quantity: <input type="text" name="quantity"></p>
+  <p>ID: <input type="text" name="id"></p>
+  <input type="submit" value="Update">
+  <button><a href="/inventory">Cancel</a></button>
+</form>

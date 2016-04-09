@@ -1,0 +1,26 @@
+<h1>Product manifest</h1>
+
+<table style="width: 30%">
+  <tr style="text-align: left">
+    <th>Animal</th>
+    <th>Price</th>
+    <th>Stock</th>
+    <th>ID</th>
+    <th colspan=3></th>
+  </tr>
+<% @inventory.each_with_index do |pet, i| %>
+<form action="/inventory/<%= i %>/update" method="POST">
+  <tr>
+   <td><input type="text" name="name" value="<%= pet[:name] %>"></td>
+   <td><input type="text" name="price" value="<%= pet[:price] %>"></td>
+   <td><input type="text" name="quantity" value="<%= pet[:quantity] %>"</td>
+   <td><input type="text" name="id" value="<%= pet[:id] %>"</td>
+   <td><input type="submit" value="Update"></td>
+   <td><a href="/inventory/<%= i %>/delete">Delete</a></td>
+   <td><a href="/inventory/<%= i %>/edit">Edit</a></td>
+ </tr>
+</form>
+<% end %>
+</table>
+
+<a href="/inventory/new">New</a>

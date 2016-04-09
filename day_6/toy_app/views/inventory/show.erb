@@ -1,0 +1,12 @@
+<h1><%= @pet[:name] %></h2>
+
+<p><%= @pet[:price] %></p>
+<p><%= @pet[:quantity] %></p>
+<p><%= @pet[:id] %></p>
+
+<br />
+<a href="/inventory">[Index]</a>
+<br />
+<a href="/inventory/new">New</a>
+<a href="/inventory/<%= @i %>/edit">Edit</a>
+<a href="/inventory/<%= @i %>/delete">Delete</a>

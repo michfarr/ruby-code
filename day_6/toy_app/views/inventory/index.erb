@@ -1,0 +1,8 @@
+<h2>Inventory Index</h2>
+
+<% @inventory.each_with_index do |animal, i| %>
+  <h3><a href="/inventory/<%= i %>"><%= animal[:name] %></a></h3>
+<% end %>
+
+<br />
+<a href="/inventory/new">New</a>
